@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2e2e2e, #1c1c1c);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+#game-container {
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+canvas {
+  background-color: #222;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+#hud {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.hidden {
+  display: none;
+}
+
+#submenu {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+#goalsTrack {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.goal {
+  width: 40px;
+  height: 40px;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.goal.completed {
+  background: limegreen;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px lime;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-btn:hover {
+  background: #555;
+}
+

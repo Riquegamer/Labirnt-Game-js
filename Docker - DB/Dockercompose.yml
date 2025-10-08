@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:8.0.43-debian                 # Usa a versão oficial do MySQL 8
+    container_name: mysql_db         # Nome do container
+    restart: unless-stopped          # Reinicia automaticamente, exceto se parado manualmente
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass123        # Senha do usuário root (use variáveis de ambiente em produção)
+      MYSQL_DATABASE: app_db                   # Cria automaticamente um banco de dados
+      MYSQL_USER: app_user                     # Cria um usuário adicional
+      MYSQL_PASSWORD: app_pass123              # Senha do usuário adicional
+    ports:
+      - "3306:3306"                            # Expõe a porta padrão do MySQL
+    volumes:
+      - ./data/mysql:/var/lib/mysql            # Persistência dos dados no host
+      - ./config/my.cnf:/etc/mysql/conf.d/my.cnf:ro  # Arquivo de configuração customizado (opcional)
+   

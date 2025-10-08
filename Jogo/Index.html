@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo de Labirinto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>🌀 Jogo do Labirinto</h1>
+
+  <div id="hud">
+    <span>Pontuação: <strong id="score">0</strong></span>
+  </div>
+
+  <div id="game-container">
+    <canvas id="maze" width="500" height="500"></canvas>
+    <div id="submenu" class="hidden">
+      <h2>🏆 Trilha de Conquistas</h2>
+      <label for="playerName">Digite seu nome:</label>
+      <input type="text" id="playerNameCheck" placeholder="Seu nome" />
+      <button id="loadProgress">Ver Progresso</button>
+
+      <div id="goalsTrack">
+        <!-- Esferas de objetivos -->
+        <div class="goal" data-points="10">10</div>
+        <div class="goal" data-points="20">20</div>
+        <div class="goal" data-points="50">50</div>
+        <div class="goal" data-points="70">70</div>
+        <div class="goal" data-points="100">100</div>
+      </div>
+
+      <button id="closeMenu">Fechar</button>
+    </div>
+
+    <!-- Botão para abrir o submenu -->
+    <button id="openMenu" class="menu-btn">🎯 Trilha de Pontos</button>
+
+  </div>
+
+  <p>Use as setas do teclado ou as téclas (W, A, S, D) para mover o quadrado azul, colete moedas 🪙 e chegue até o
+    verde!</p>
+
+  <script src="script.js"></script>
+
+  <div id="hud">
+    <label>Nome: <input id="playerName" type="text" placeholder="Digite seu nome" /></label>
+    <span>Pontuação: <strong id="score">0</strong></span>
+  </div>
+
+  <div id="records">
+    <h3>🏆 Recordes</h3>
+    <ul id="recordList"></ul>
+  </div>
+</body>
+
+</html>
